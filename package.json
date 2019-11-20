@@ -1,0 +1,19 @@
+{
+  "directories": {
+    "doc": "doc",
+    "example": "example",
+    "lib": "lib",
+    "test": "test"
+  },
+  "license": "AGPL-3.0",
+  "name": "@tmcnab/datastore",
+  "repository": {
+	  "type": "git",
+	  "url": "git+https://github.com/tmcnab/datastore.git"
+  },
+  "scripts": {
+    "example": "cd example && npm start"
+  },
+  "type": "module",
+  "version": "0.0.1"
+}
