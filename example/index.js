@@ -4,16 +4,21 @@ import express from 'express'
 import http from 'http'
 import logger from 'morgan'
 import path from 'path'
-import DataStore from '../lib/Server'
+import routers from './routers/index.js'
+import hbs from 'hbs'
+// import DataStore from '../lib/Server.js'
 
-const db = new DataStore()
+// const db = new DataStore()
 const app = express()
 
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+hbs.localsAsTemplateData(app);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'static')));
+// app.use(express.static(path.join(__dirname, 'static')));
+
+routers(app)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

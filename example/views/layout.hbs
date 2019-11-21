@@ -1,10 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/style.css' />
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+	<head>
+		<title>{{title}}</title>
+		<style>
+			:root {
+				--bg-color: #999;
+			}
+
+			body {
+				color: #222;
+				font-family: sans-serif;
+				font-size: 16px;
+				margin: 0;
+				padding: 0;
+			}
+
+			body > header {
+				background-color: var(--bg-color);
+				flex-direction: row;
+				padding: 1rem 2rem;
+				align-items: center;
+			}
+
+			body > header > * {
+				flex: 1;
+			}
+
+			body > header * {
+				color: white;
+				text-decoration: none !important;
+			}
+
+			main {
+				padding: 0 2rem;
+			}
+
+			body > header form button,
+			body > header form input,
+			body > header form input::placeholder {
+				background-color: #999;
+				border: 1px solid white;
+				color: white !important;
+				padding: 0.5rem;
+			}
+
+			body > header form input {
+				width: 85%;
+			}
+
+			pre {
+				border: 1px solid var(--bg-color);
+				border-radius: 5px;
+				overflow-x: scroll;
+				padding: 0.5rem 1rem;
+			}
+
+			.flex { display: flex !important }
+		</style>
+	</head>
+	<body>
+		<header class='flex'>
+			<div class='links'>
+				<a href='/'>Articles</a> /
+				<a href='/new'>New</a> /
+				<a href='/settings'>Settings</a>
+			</div>
+			<form action='/search'>
+				<input name='query' placeholder="Search for Articles" required />
+				<button type='submit'>Go</button>
+			</form>
+		</header>
+		<main>
+			{{{body}}}
+		</main>
+	</body>
 </html>

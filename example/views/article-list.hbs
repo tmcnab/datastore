@@ -1,0 +1,16 @@
+<header>
+	<h1>Articles</h1>
+<header>
+<ol>
+	{{#each articles}}
+		<li>
+			<a href='{{url}}'>{{title}}</a>
+			<br />
+			1 comments / RT 
+		</li>
+	{{/each}}
+</ol>
+{{#each article}}
+{{else}}
+<p>No articles have been posted.</p>
+{{/each}}

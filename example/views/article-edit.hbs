@@ -1,0 +1,13 @@
+<header>
+	<h1>{{#if article.id}}Editing{{else}}New{{/if}} Article</h1>
+</header>
+<form action='/articles/' method='post'>
+	<fieldset>
+		<label for='url'>URL</label>
+		<input name='url' placeholder='https://website.domain/path' type='url' />
+	</fieldset>
+
+	<p>Welcome to {{title}}</p>
+
+
+</form>

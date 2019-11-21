@@ -8,12 +8,15 @@
   "license": "AGPL-3.0",
   "name": "@tmcnab/datastore",
   "repository": {
-	  "type": "git",
-	  "url": "git+https://github.com/tmcnab/datastore.git"
+    "type": "git",
+    "url": "git+https://github.com/tmcnab/datastore.git"
   },
   "scripts": {
-    "example": "cd example && npm start"
+    "example": "cd example && npm install && npm start"
   },
   "type": "module",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "dependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
